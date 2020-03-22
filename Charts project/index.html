@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylepages.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+	<title>TEST PROJECT FOR CHARTS</title>
+
+</head>
+<body>
+
+	
+<ul>
+  <li><a class="active" href="#home">Covid-19 DashBoard</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+	<center>
+		<h1 class="fstyle" >Coronavirus Outbreak In India</h1>
+		<button id="myBtn" style="margin-bottom: 10px;">View Table</button>
+			<div id="myModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+   			 <span class="close">&times;</span>
+    			<p id="appStatus" style="text-align: center;"></p>
+  			</div>
+
+</div>
+	</center>
+
+	
+	<div class="row">
+    <div class="col-sm-3" style="background-color:#263238
+; height: 110px; color: white"> <center><p>CONFIRMED CASES</p><h2 id="confirmedId"></h2></center></div>
+
+    <div class="col-sm-3" style="background-color:#455A64
+; height: 120px; border:1px; color: white;"><center><h4>HOSPITALIZED CASES</h4><h2 id="hospitalizedId"></h2><span id="hospitalizedPercentId" style="color: pink;"></span></center></div>
+
+    <div class="col-sm-3" style="background-color:#607D8B
+; height: 110px; color: white;"><center>RECOVERED CASES<h2 id='recoveredId'></h2><span id="recoveredPercentId" style="color: lightgreen;"></span></center></div>
+
+    <div class="col-sm-3" style="background-color:#ECEFF1
+; height: 110px;"><center>DEATHS<h2 id="deathsId" ></h2><span id="deathsPercentId" style="color: brown;"></span></center></div>
+  </div>
+</div>
+
+	<div class="container">
+	<canvas id="mylineChart" ></canvas>
+	</div>
+
+
+<h2 class="fstyle stateWiseTitle">States Wise Cases</h2>
+
+	<div class="container">
+		<div class="hBarDesktop"><canvas id="myChartStates" height="150px" ></canvas></div>
+
+		<div class="hBarMob" ><canvas id="myChartStatesMob" style="position: relative; height:60vh; width:80vw"></canvas></div>
+
+	</div>
+
+	
+		
+	
+<div class="row">
+    <div class="col-sm-6 " style="background-color:white;">
+     	<center>
+    		<div class="cardBoot" style="margin-left: 10px;">
+  				<div class="containerBoot">
+   					 <div class="cardTitleBg"><center><h3 class="fstyle">Nationality Of The Patient</h3></center></div>
+   					 	<center><canvas id="myChartNationality" style="max-height: 600px; max-width: 600px;"></canvas></center>
+  				</div>
+			</div>
+		<center>	
+    </div>
+    <div class="col-sm-6 " style="background-color:white;">
+      	<center><div class="cardBoot" style="margin-left: 10px;">
+  			<div class="containerBoot">
+   			 	<div class="cardTitleBg"><center><h3 class="fstyle">Over All Cases in India</h3></center></div>
+   					 	<center><canvas id="myChartOverAll" style="max-height: 600px; max-width: 600px;"></canvas></center>
+  			</div>
+		</div></center>
+    </div>
+  </div>
+
+
+
+<center>The DashBoard Was last Updated on<span style="color: red;"> 22 March 2020</span><br>&copy; telugustories.in</center>
+
+
+ 
+
+<!-- The Modal -->
+
+<table style="width: 100%; display: none;">
+    <th>S no</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Status</th>
+    <th>Nationality</th>
+    <th>Confiremed On</th>
+    <th>Discharged On</th>
+    <th>Transmission Type</th>
+    <th>Traveled From</th>
+    
+</table>
+<p id="appFullTable" style="display: none;"></p>
+<p id="appStates" style="display: none;"></p>
+<p id="appNationality" style="display: none;"></p>
+
+
+
+<!-- ----------------------------------------------------------------- -->
+
+
+<script src="charts.js" type="text/javascript"></script>
+</body>
+</html>
