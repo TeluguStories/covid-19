@@ -417,17 +417,17 @@ var totCases = HospitalizedNumber+RecoveredNumber+Deathnumber;
     </tr>
     <tr>
         <td>HOSPITALIZED</td>
-        <td>${HospitalizedNumber}</td>
+        <td style="text-align: right;">${HospitalizedNumber}</td>
         <td>${Math.round(hPercent)}%</td>
     </tr>
     <tr>
         <td>RECOVERED</td>
-        <td>${RecoveredNumber}</td>
+        <td style="text-align: right;">${RecoveredNumber}</td>
         <td>${Math.round(rPercent)}%</td>
     </tr>
     <tr>
         <td>Deaths</td>
-        <td>${Deathnumber}</td>
+        <td style="text-align: right;">${Deathnumber}</td>
         <td>${Math.round(dPercent)}%</td>
     </tr>
     <tr>
