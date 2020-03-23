@@ -445,7 +445,7 @@ var mylineChart = new Chart(ctx, {
         labels: ['JAN 30', 'FEB 15', 'MAR 02', 'MAR 05', 'MAR 10', 'MAR 15', 'MAR 20','TODAY'],
         datasets: [{
             label: 'Rise Trend In India',
-            data: [1, 3, 5, 30, 50, 109, 252, 344],
+            data: [1, 3, 5, 30, 50, 109, 252, totCases],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
